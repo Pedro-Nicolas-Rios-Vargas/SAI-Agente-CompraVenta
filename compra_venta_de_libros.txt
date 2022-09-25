@@ -1,0 +1,46 @@
+Sistema multiagente
+
+
+                            AGENTE COMPRADOR
+
+
+Compra - venta de libros
+
+    Existirá un agente comprador que recibe una orden de compra por parte del
+usuario al cual representa que le indica el titulo del libro a comprar.
+
+    El agente requerirá ofertas del libro a todos los agentes vendedores que
+conoce, efectuando la compra de aquel libro más barato de entre todas las
+ofertas que recibe.
+
+                Object[] args = getArguments();
+
+Para terminar la ejecución del agente se invoca al metodo 'doDelete()' que
+llama a su vez al método 'takeDown()'.
+
+Cambiar al agente Comprador para que cuando no haya un nombre del libro
+finalice el agente.
+
+                Comportamiento (Behaviour)
+
+                    Metodo action()
+                    Metodo done() <- tipo booleano
+
+                utilizaremos el 'TickerBehaviour'
+                para mandar un Request a los agentes vendedores.
+
+
+                            AGENTE VENDEDOR
+
+
+Se dedicará a vender libros con el fin de poderlo comunicar con el agente
+comprador.
+Debe tener un catálogo de libros para la venta.
+
+    -> Utiliza la clase InterfazVendedor
+    -> Tiene un método actualizarCatálogo, que añade elementos mediante el
+       comportamiento OneShotBehaviour
+    -> Cada vez que se inserta un libro se imprime un mensaje con el titulo del
+       libro y el precio.
+
+
